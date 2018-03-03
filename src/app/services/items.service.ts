@@ -22,6 +22,7 @@ export class ItemsService {
       .subscribe( data => {
         this.cargandoItems = false;
         console.log(data.json());
+        this.items = data.json();
       })
 
     }
