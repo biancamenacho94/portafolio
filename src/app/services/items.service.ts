@@ -24,8 +24,11 @@ export class ItemsService {
         //console.log(data.json());
         this.items = data.json();
       })
-
     }
+  }
+
+  public cargar_item( cod:string ){
+    return this.http.get(`https://portfolio-ae1da.firebaseio.com/items_descripcion/${ cod }.json`);
   }
 
 }
