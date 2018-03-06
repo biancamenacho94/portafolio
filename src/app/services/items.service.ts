@@ -21,7 +21,7 @@ export class ItemsService {
       this.http.get('https://portfolio-ae1da.firebaseio.com/items.json')
       .subscribe( data => {
         this.cargandoItems = false;
-        console.log(data.json());
+        //console.log(data.json());
         this.items = data.json();
       })
 
