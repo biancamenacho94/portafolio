@@ -12,7 +12,7 @@ export class HeaderComponent {
                private router:Router){}
 
   buscar_item(termino:string){
-    console.log(termino);
+    
     this.router.navigate( ['search', termino] );
   }
 
