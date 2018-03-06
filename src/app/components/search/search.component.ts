@@ -14,12 +14,12 @@ export class SearchComponent {
   termino:string = undefined;
 
   constructor( private route:ActivatedRoute,
-               private _its:ItemsService) {
-                 
+               public _its:ItemsService) {
+
       route.params.subscribe( parametros=>{
         this.termino = parametros['termino'];
-        console.log(this.termino);
 
+        //Enviamos el termino para realizar la busqueda.
         _its.buscar_items( this.termino );
 
       })

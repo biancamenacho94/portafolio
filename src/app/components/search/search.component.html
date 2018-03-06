@@ -23,7 +23,7 @@
 </div>
 
 
-<div *ngIf="_its.items_filtrados.length > 0"
+<div *ngIf="_its.items_filtrados.length > 0 && !_its.cargandoItems"
   class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
 
   <a *ngFor="let item of _its.items_filtrados" [routerLink]="[ '/item' , item.cod ]"
